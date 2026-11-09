@@ -1,0 +1,5 @@
+check,rule,flagged,of_total,pct_of_net_revenue,decision,pct_flagged
+Daily net revenue,robust z > 3.5 vs rolling median (15d),0,84,0.0,None found. The series is volatile but contains no isolated anomalies.,0.0
+Unit price vs own style,price > 1.5x or < 0.67x style median,457,104593,0.46,Kept. Flag only. See note below.,0.44
+Unit price vs category (naive IQR),outside 1.5 x IQR within category,4258,104593,5.15,"Not used: flags legitimately expensive styles (many are premium Kurtas), not errors.",4.07
+Quantity per line,qty >= 5,6,128969,0.02,Kept. Plausible bulk/B2B lines (max qty is 8).,0.0

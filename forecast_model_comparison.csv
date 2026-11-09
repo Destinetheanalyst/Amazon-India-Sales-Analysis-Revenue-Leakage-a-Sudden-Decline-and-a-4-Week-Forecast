@@ -1,0 +1,7 @@
+,net_revenue_next_28_days,mean_wape,mean_bias,wape_after_step
+Seasonal naive (last week),18028780.0,17.6,0.9,13.2
+"Level, last 14 days x weekday",18908376.0,14.4,2.4,11.7
+"Level, last 28 days x weekday",20790050.0,13.4,8.8,10.1
+Exp. smoothing x weekday,18442058.0,11.2,-3.3,11.4
+Linear trend x weekday,17980479.0,18.3,-2.2,15.0
+Ensemble of the three level models,19380161.0,12.2,2.6,10.3

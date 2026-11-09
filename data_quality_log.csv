@@ -1,0 +1,18 @@
+step,rule,rows_affected
+1.0,Stripped column names (e.g. 'Sales Channel ') and dropped empty 'Unnamed: 22',0
+2.0,Exact duplicate order lines dropped (kept first),6
+3.0,Parsed order_date from mm-dd-yy; added order_month (first day of month),128969
+4.0,Category standardised to Title Case (e.g. 'kurta' -> 'Kurta'),49874
+5.0,"ship-state standardised (case, typos, abbreviations, Orissa->Odisha etc.)",5064
+6.0,State mapped to official zone; rows left 'Unknown' (no/invalid state),34
+7.0,Replaced messy promotion_ids text with has_promotion flag (0/1),79819
+8.0,"Dropped fulfilled_by (identical to fulfilment), currency (all INR) and country (all IN)",0
+9.0,"amount was NULL (set to 0, flagged in amount_was_missing)",7792
+10.0,Completed lines with zero/missing amount (flagged zero_value_completed; kept),2486
+10.1,"Non-Amazon channel lines (multi-channel fulfilment): all zero-amount, kept but excluded from fulfilment analysis",124
+10.2,Completed lines with qty = 0 (kept; contribute no units),101
+10.3,Return statuses exist only for Merchant fulfilment: Amazon-fulfilled returns are NOT in this report (do not compare return rates across fulfilment),2109
+10.4,has_promotion is not a causal variable: 98% of cancelled lines have no promotion ID (recorded after confirmation),18034
+11.0,dim_products: SKUs with >1 ASIN resolved to most frequent ASIN,5
+12.0,Stock file: rows without Design No./Stock removed,36
+13.0,"Stock file: exact duplicate rows removed (SKU Code contains Excel '#REF!' errors, so Design No. is used as key)",3

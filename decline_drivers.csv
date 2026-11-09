@@ -1,0 +1,17 @@
+segment,dimension,before_per_day,after_per_day,change_per_day,pct_change,share_of_total_change_pct
+Set,category,468378.0,333099.0,-135279.0,-29.0,86.0
+Kurta,category,241647.0,193125.0,-48522.0,-20.0,31.0
+Top,category,55560.0,52962.0,-2598.0,-5.0,2.0
+Blouse,category,5555.0,3921.0,-1634.0,-29.0,1.0
+Ethnic Dress,category,7727.0,8489.0,762.0,10.0,-0.0
+Western Dress,category,93682.0,125158.0,31476.0,34.0,-20.0
+Amazon,fulfilment,623276.0,518620.0,-104656.0,-17.0,67.0
+Merchant,fulfilment,252779.0,200455.0,-52325.0,-21.0,33.0
+Expedited,ship_service_level,622708.0,518347.0,-104361.0,-17.0,66.0
+Standard,ship_service_level,253347.0,200728.0,-52620.0,-21.0,34.0
+West,zone,194815.0,151435.0,-43380.0,-22.0,28.0
+Central,zone,115247.0,87061.0,-28185.0,-24.0,18.0
+South,zone,328850.0,300818.0,-28031.0,-8.0,18.0
+North,zone,131076.0,103967.0,-27109.0,-21.0,17.0
+East,zone,85509.0,59594.0,-25916.0,-30.0,16.0
+North-East,zone,20359.0,16036.0,-4324.0,-21.0,3.0

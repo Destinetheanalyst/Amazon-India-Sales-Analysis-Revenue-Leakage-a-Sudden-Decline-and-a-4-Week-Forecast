@@ -1,0 +1,5 @@
+scenario,net_revenue_next_28_days,vs_base_pct
+Low (10th percentile),15559924.0,-19.7
+Base forecast,19380160.0,0.0
+High (90th percentile),22722576.0,17.2
+Back to pre-step level,24538460.0,26.6

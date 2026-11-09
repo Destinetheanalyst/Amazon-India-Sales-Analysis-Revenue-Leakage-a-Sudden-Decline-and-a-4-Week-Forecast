@@ -1,0 +1,140 @@
+{
+  "window": {
+    "first_full_day": "2022-04-01",
+    "last_settled_day": "2022-06-26",
+    "start_monday": "2022-04-04",
+    "end_sunday": "2022-06-26",
+    "days": 84
+  },
+  "outliers": {
+    "daily_flagged": 0,
+    "price_flagged_pct_lines": 0.44,
+    "price_flagged_pct_revenue": 0.46,
+    "naive_iqr_flagged_pct_lines": 4.07
+  },
+  "step_change": {
+    "date": "2022-05-09",
+    "before_per_day": 876056,
+    "after_per_day": 719075,
+    "pct_change": -17.9,
+    "ci95_pct": [
+      -23.4,
+      -11.3
+    ],
+    "r2_linear_trend": 0.28,
+    "r2_step_change": 0.44,
+    "days_before": 35,
+    "days_after": 49,
+    "cancel_rate_before": 14.4,
+    "cancel_rate_after": 14.1,
+    "gross_booked_pct_change": -17.8,
+    "order_lines_pct_change": -22.5
+  },
+  "by_category_pct": {
+    "Set": -29.0,
+    "Kurta": -20.0,
+    "Top": -5.0,
+    "Blouse": -29.0,
+    "Ethnic Dress": 10.0,
+    "Western Dress": 34.0
+  },
+  "by_zone_pct": {
+    "West": -22.0,
+    "Central": -24.0,
+    "South": -8.0,
+    "North": -21.0,
+    "East": -30.0,
+    "North-East": -21.0
+  },
+  "segments_declining": {
+    "zones": "6 of 6",
+    "categories": "4 of 6"
+  },
+  "pvm": {
+    "delta_rev_per_day": -156981,
+    "volume": -197585,
+    "mix": 1572,
+    "price": 39032,
+    "reconciles": true
+  },
+  "styles": {
+    "continuing": 1135,
+    "pct_continuing_declining": 63.3,
+    "continuing_change_per_day": -160191,
+    "discontinued_change_per_day": -3046,
+    "new_change_per_day": 6256,
+    "top10_decliners_pct_of_declines": 27.1
+  },
+  "stockout_test": {
+    "top_styles_tested": 150,
+    "styles_with_le10_units": 1,
+    "spearman_rho": -0.02,
+    "p_value": 0.83
+  },
+  "backtest": {
+    "best_model": "Ensemble of the three level models",
+    "best_wape_after_step": 10.3,
+    "naive_wape_after_step": 13.2,
+    "table": [
+      {
+        "model": "Level, last 28 days x weekday",
+        "mean_wape": 13.4,
+        "mean_bias": 8.8,
+        "wape_after_step": 10.1
+      },
+      {
+        "model": "Ensemble of the three level models",
+        "mean_wape": 12.2,
+        "mean_bias": 2.6,
+        "wape_after_step": 10.3
+      },
+      {
+        "model": "Exp. smoothing x weekday",
+        "mean_wape": 11.2,
+        "mean_bias": -3.3,
+        "wape_after_step": 11.4
+      },
+      {
+        "model": "Level, last 14 days x weekday",
+        "mean_wape": 14.4,
+        "mean_bias": 2.4,
+        "wape_after_step": 11.7
+      },
+      {
+        "model": "Seasonal naive (last week)",
+        "mean_wape": 17.6,
+        "mean_bias": 0.9,
+        "wape_after_step": 13.2
+      },
+      {
+        "model": "Linear trend x weekday",
+        "mean_wape": 18.3,
+        "mean_bias": -2.2,
+        "wape_after_step": 15.0
+      }
+    ]
+  },
+  "model_totals": {
+    "Seasonal naive (last week)": 18028780.0,
+    "Level, last 14 days x weekday": 18908376.0,
+    "Level, last 28 days x weekday": 20790050.0,
+    "Exp. smoothing x weekday": 18442058.0,
+    "Linear trend x weekday": 17980479.0,
+    "Ensemble of the three level models": 19380161.0
+  },
+  "forecast": {
+    "from": "2022-06-27",
+    "to": "2022-07-24",
+    "model": "Ensemble of the three level models",
+    "interval_log_q10_q90": [
+      -0.22,
+      0.159
+    ],
+    "scenarios": {
+      "Low (10th percentile)": 15559924.0,
+      "Base forecast": 19380160.0,
+      "High (90th percentile)": 22722576.0,
+      "Back to pre-step level": 24538460.0
+    }
+  }
+}
