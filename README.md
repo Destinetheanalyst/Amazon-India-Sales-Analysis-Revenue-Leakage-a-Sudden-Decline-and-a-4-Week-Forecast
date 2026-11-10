@@ -12,7 +12,7 @@ This project analyses 128,975 Amazon India order lines (31 Mar to 29 Jun 2022) t
 | --- | --- |
 | Revenue kept after cancellations and returns | Rs65.9M of Rs73.8M booked (89%) |
 | Step change in daily revenue, around 9 May | -17.9% (Rs876K to Rs719K per day; 95% interval -23% to -11%) |
-| Forecast, next 28 days | Rs19.4M (80% range ₹15.6M to Rs22.7M) |
+| Forecast, next 28 days | Rs19.4M (80% range Rs15.6M to Rs22.7M) |
 | Best sellers at risk (under 30 days of stock) | 76 styles, 26% of revenue |
 
 ## Business Problem
