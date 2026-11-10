@@ -10,9 +10,9 @@ This project analyses 128,975 Amazon India order lines (31 Mar to 29 Jun 2022) t
 
 | Result | Value |
 | --- | --- |
-| Revenue kept after cancellations and returns | ₹65.9M of ₹73.8M booked (89%) |
-| Step change in daily revenue, around 9 May | -17.9% (₹876K to ₹719K per day; 95% interval -23% to -11%) |
-| Forecast, next 28 days | ₹19.4M (80% range ₹15.6M to ₹22.7M) |
+| Revenue kept after cancellations and returns | Rs65.9M of Rs73.8M booked (89%) |
+| Step change in daily revenue, around 9 May | -17.9% (Rs876K to Rs719K per day; 95% interval -23% to -11%) |
+| Forecast, next 28 days | Rs19.4M (80% range ₹15.6M to Rs22.7M) |
 | Best sellers at risk (under 30 days of stock) | 76 styles, 26% of revenue |
 
 ## Business Problem
@@ -21,7 +21,7 @@ A fashion seller on Amazon India wants answers to five questions:
 
 1. Where does revenue leak (cancellations, returns)?
 2. Did revenue fall gradually or suddenly, and in which segments?
-3. Can cancellations, catalog changes or stock-outs explain the fall?
+3. Can cancellations, catalog changes, or stock-outs explain the fall?
 4. What should we expect over the next four weeks, and how sure can we be?
 5. Which products are about to run out, and which are tying up stock?
 
@@ -65,7 +65,7 @@ raw CSVs → Excel (inspect) → Python (clean, star schema) → Excel (reconcil
 - **Settled window.** Detected from the data, not hard-coded, and trimmed to whole Monday-to-Sunday weeks.
 - **Documented data quality.** 15 issues found and logged with a decision for each, including 6 duplicate lines, 69 spellings for about 36 states, and 7,795 blank amounts (97% on cancelled orders, so kept and flagged rather than dropped).
 - **Traps recorded, not hidden.** Returns exist only for Merchant orders, so return rates are never compared across fulfilment models. Promotion IDs are not used to explain cancellations: 98% of cancelled lines have none, which would falsely suggest promotions prevent cancellations.
-- **Reconciled across tools.** The same totals (128,969 lines, ₹78,590,043.30 booked, ₹69,660,658.00 net) appear in Excel, MySQL and Python, and every dashboard measure is checked against an independently computed value.
+- **Reconciled across tools.** The same totals (128,969 lines, Rs78,590,043.30 booked, Rs69,660,658.00 net) appear in Excel, MySQL and Python, and every dashboard measure is checked against an independently computed value.
 - **Forecast validated before use.** Six simple models were backtested on unseen data with rolling origins. The best have about 10% to 12% average daily error, against 13% for a naive baseline and 15% for a linear trend. The final forecast is an ensemble of the three best, because their scores cannot be told apart with so few test windows. That selection rule was set after seeing the results, and the models disagree by up to 16% on the 28-day total, so the output is a range, not a single number.
 - **Nothing deleted as an outlier.** No daily anomalies were found. Comparing each price with its own style flags 0.44% of lines, which are plausible and kept.
 
@@ -77,7 +77,7 @@ A three-page Power BI report built on the cleaned star schema and the Python out
 
 | Page | Purpose |
 | --- | --- |
-| Executive Overview | Net revenue, leakage, average order value, revenue by week, category, zone and state |
+| Executive Overview | Net revenue, leakage, average order value, revenue by week, category, zone, and state |
 | Why It Fell, and What Is Next | The step change, segment drivers, the 4-week forecast with range, and scenarios |
 | Leakage and Inventory | Revenue waterfall from booked to net, cancel rate by fulfilment, best sellers at risk of stock-out, dead stock |
 
@@ -86,8 +86,8 @@ A three-page Power BI report built on the cleaned star schema and the Python out
 
 | # | Recommendation | Evidence |
 | --- | --- | --- |
-| 1 | Find what changed on or around 9 May (advertising, sale events, pricing, competitors) | A 17.9% step down worth about ₹157K per day, roughly ₹5M a month, across every zone, with the obvious causes ruled out |
-| 2 | Reduce Merchant (Easy Ship) cancellations | 17.5% vs 12.8%. Matching Amazon’s rate would have kept roughly ₹0.8M of bookings (a rough estimate) |
+| 1 | Find what changed on or around 9 May (advertising, sale events, pricing, competitors) | A 17.9% step down worth about Rs157K per day, roughly Rs5M a month, across every zone, with the obvious causes ruled out |
+| 2 | Reduce Merchant (Easy Ship) cancellations | 17.5% vs 12.8%. Matching Amazon’s rate would have kept roughly Rs0.8M of bookings (a rough estimate) |
 | 3 | Reorder best sellers now | 76 styles under 30 days of stock, 12 under a week, covering 26% of revenue |
 | 4 | Clear dead stock | 276 styles, 14,353 units, no sales in the window |
 
